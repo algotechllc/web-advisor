@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Web Advisor">
+  <rect width="32" height="32" rx="7" fill="#0b1220"/>
+  <path
+    fill="#2dd4bf"
+    d="M16 4.5c2.4 1.5 4.9 2.4 7.5 2.7v8.2c0 5.1-3.3 8.7-7.5 10.4-4.2-1.7-7.5-5.3-7.5-10.4V7.2c2.6-.3 5.1-1.2 7.5-2.7z"
+  />
+  <path
+    fill="#0b1220"
+    fill-rule="evenodd"
+    d="M14.1 17.9 11.6 15.4a1.1 1.1 0 0 1 1.55-1.55l1.7 1.7 4.2-4.2a1.1 1.1 0 1 1 1.56 1.55l-4.98 4.98a1.1 1.1 0 0 1-1.55 0z"
+  />
+</svg>

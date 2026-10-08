@@ -1,0 +1,118 @@
+:root {
+  color-scheme: dark;
+  --ink: #0b1220;
+  --panel: #121a2b;
+  --line: #243049;
+  --mist: #c5d0e6;
+  --muted: #8a97b0;
+  --accent: #2dd4bf;
+  --ok: #34d399;
+  --warn: #f59e0b;
+  --danger: #f43f5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+  font: 14px/1.4 "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--mist);
+}
+
+main {
+  padding: 16px;
+}
+
+.eyebrow {
+  margin: 0;
+  font: 500 11px/1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 8px 0 0;
+  font: 500 16px/1.3 "IBM Plex Mono", ui-monospace, monospace;
+  color: #fff;
+  word-break: break-all;
+}
+
+.grade-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.grade {
+  display: inline-flex;
+  min-width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border-radius: 4px;
+  font: 600 20px/1 "IBM Plex Mono", ui-monospace, monospace;
+  background: var(--line);
+  color: #fff;
+}
+
+.grade.good { background: var(--ok); color: var(--ink); }
+.grade.fair { background: var(--accent); color: var(--ink); }
+.grade.warn { background: var(--warn); color: var(--ink); }
+.grade.bad { background: var(--danger); color: #fff; }
+
+.score {
+  font: 12px/1 "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--muted);
+}
+
+.status {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.button {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 0;
+  background: var(--accent);
+  color: var(--ink);
+  font: 600 13px/1 inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--mist);
+}
+
+.button[aria-disabled="true"],
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.options {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}

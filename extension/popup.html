@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Advisor</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Web Advisor</p>
+      <h1 id="host">—</h1>
+      <div class="grade-row">
+        <span id="grade" class="grade">…</span>
+        <span id="score" class="score"></span>
+      </div>
+      <p id="status" class="status">Checking current tab…</p>
+      <div class="actions">
+        <a id="report" class="button" href="#" target="_blank" rel="noreferrer">Full report</a>
+        <button id="rescan" type="button" class="button secondary">Rescan</button>
+      </div>
+      <a class="options" href="options.html" target="_blank">Options</a>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

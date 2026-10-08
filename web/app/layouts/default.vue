@@ -18,6 +18,14 @@ const branding = useSiteBranding()
           <NuxtLink to="/about" class="hover:text-accent">About</NuxtLink>
           <NuxtLink to="/contact" class="hover:text-accent">Contact</NuxtLink>
           <NuxtLink to="/privacy" class="hover:text-accent">Privacy</NuxtLink>
+          <a
+            :href="branding.githubUrl"
+            target="_blank"
+            rel="noreferrer"
+            class="hover:text-accent"
+          >
+            GitHub
+          </a>
         </nav>
       </div>
     </header>

@@ -25,6 +25,8 @@ export default defineNuxtConfig({
       orgLocality: process.env.NUXT_PUBLIC_ORG_LOCALITY || 'City',
       orgCountry: process.env.NUXT_PUBLIC_ORG_COUNTRY || 'US',
       orgPostalCode: process.env.NUXT_PUBLIC_ORG_POSTAL_CODE || '00000',
+      githubUrl:
+        process.env.NUXT_PUBLIC_GITHUB_URL || 'https://github.com/algotechllc/web-advisor',
     },
   },
   nitro: {

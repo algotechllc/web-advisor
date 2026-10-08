@@ -11,6 +11,7 @@ export interface SiteBranding {
   orgLocality: string
   orgCountry: string
   orgPostalCode: string
+  githubUrl: string
 }
 
 export const DEFAULT_SITE_NAME = 'Web Advisor'
@@ -31,6 +32,7 @@ export const DEFAULT_SITE_BRANDING: SiteBranding = {
   orgLocality: 'City',
   orgCountry: 'US',
   orgPostalCode: '00000',
+  githubUrl: 'https://github.com/algotechllc/web-advisor',
 }
 
 export type PublicRuntimeBranding = Partial<{
@@ -45,6 +47,7 @@ export type PublicRuntimeBranding = Partial<{
   orgLocality: string
   orgCountry: string
   orgPostalCode: string
+  githubUrl: string
 }>
 
 export function resolveSiteBranding(input?: PublicRuntimeBranding | null): SiteBranding {
@@ -64,6 +67,7 @@ export function resolveSiteBranding(input?: PublicRuntimeBranding | null): SiteB
     orgLocality: pick(input?.orgLocality, DEFAULT_SITE_BRANDING.orgLocality),
     orgCountry: pick(input?.orgCountry, DEFAULT_SITE_BRANDING.orgCountry),
     orgPostalCode: pick(input?.orgPostalCode, DEFAULT_SITE_BRANDING.orgPostalCode),
+    githubUrl: pick(input?.githubUrl, DEFAULT_SITE_BRANDING.githubUrl).replace(/\/$/, ''),
   }
 }
 

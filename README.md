@@ -46,6 +46,7 @@ Company name, address, contact email, and canonical site URL are **not hardcoded
 | `NUXT_PUBLIC_ORG_LOCALITY` | JSON-LD `addressLocality` |
 | `NUXT_PUBLIC_ORG_COUNTRY` | JSON-LD `addressCountry` (ISO code) |
 | `NUXT_PUBLIC_ORG_POSTAL_CODE` | JSON-LD `postalCode` |
+| `NUXT_PUBLIC_GITHUB_URL` | Source repository link shown in the site header |
 
 Set the same keys in Vercel (or your host) for production. There are **no private API keys** required to run the scanner; DoH and Is Agentic use public endpoints.
 

@@ -43,6 +43,15 @@ describe('resolveSiteBranding', () => {
     assert.equal(branding.orgName, 'Acme')
     assert.equal(branding.siteUrl, 'https://scan.acme.test')
   })
+
+  it('coerces numeric runtime values (Vercel/Nuxt postal codes)', () => {
+    const branding = resolveSiteBranding({
+      orgPostalCode: 500001,
+      orgCountry: 'AE',
+    })
+    assert.equal(branding.orgPostalCode, '500001')
+    assert.equal(branding.orgCountry, 'AE')
+  })
 })
 
 describe('markdown pages', () => {

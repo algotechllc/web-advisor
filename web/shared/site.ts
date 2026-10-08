@@ -35,24 +35,14 @@ export const DEFAULT_SITE_BRANDING: SiteBranding = {
   githubUrl: 'https://github.com/algotechllc/web-advisor',
 }
 
-export type PublicRuntimeBranding = Partial<{
-  siteName: string
-  siteUrl: string
-  siteDescription: string
-  orgName: string
-  orgEmail: string
-  orgUrl: string
-  orgAddress: string
-  orgStreetAddress: string
-  orgLocality: string
-  orgCountry: string
-  orgPostalCode: string
-  githubUrl: string
-}>
+/** Runtime config may coerce numeric-looking env values (e.g. postal codes) to numbers. */
+export type PublicRuntimeBranding = Partial<Record<keyof SiteBranding, unknown>> & Record<string, unknown>
 
 export function resolveSiteBranding(input?: PublicRuntimeBranding | null): SiteBranding {
-  const pick = (value: string | undefined, fallback: string) => {
-    const trimmed = value?.trim()
+  const pick = (value: unknown, fallback: string) => {
+    if (value == null) return fallback
+    if (typeof value === 'object') return fallback
+    const trimmed = String(value).trim()
     return trimmed ? trimmed : fallback
   }
   return {
